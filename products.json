@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Laptop",
+        "quantity": 27
+    },
+    {
+        "name": "DCKAP Stickers",
+        "quantity": 26
+    },
+    {
+        "name": "Mouse",
+        "quantity": 21
+    },
+    {
+        "name": "Water Bottle",
+        "quantity": 18
+    },
+    {
+        "name": "chargers",
+        "quantity": 15
+    },
+    {
+        "name": "toys",
+        "quantity": 14
+    },
+    {
+        "name": "bag",
+        "quantity": 11
+    },
+    {
+        "name": "laptop",
+        "quantity": 10
+    },
+    {
+        "name": "chair",
+        "quantity": 10
+    }
+
+]

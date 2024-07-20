@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCKAP Palli Inventory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DCKAP Palli Inventory</h1>
+        </header>
+        <section class="dashboard">
+            <div class="cards">
+                <div class="card" id="top-product-1">
+                    <i class=" fa-solid fa-ticket card-icon"></i>Top Product 1
+                </div>
+                <div class="card" id="top-product-2">
+                    <i class="fa-solid fa-laptop card-icon"></i> Top Product 2
+                </div>
+                <div class="card" id="top-product-3">
+                    <i class="fa-solid fa-bottle-water card-icon"></i> Top Product 3
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="add-product-btn" class="btn">Add Product</button>
+                <button id="update-inventory-btn" class="btn">Update Inventory</button>
+            </div>
+            <div class="chart-container">
+                <canvas id="inventoryChart"></canvas>
+            </div>
+        </section>
+        <section class="recipients">
+            <h2>Recipient Details</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Recipient</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="recipient-table-body"></tbody>
+            </table>
+        </div>
+        </section>
+    </div>
+
+    <!-- Add Product Modal -->
+    <div id="add-product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-add-modal">&times;</span>
+            <h2>Add Product</h2>
+            <form id="add-product-form">
+                <label for="product-name">Product:</label>
+                <input type="text" id="product-name" name="product-name" required>
+                <label for="product-quantity">Quantity:</label>
+                <input type="number" id="product-quantity" name="product-quantity" required>
+                <button type="submit" class="btn">Add Product</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Update Inventory Modal -->
+    <div id="update-inventory-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-update-modal">&times;</span>
+            <h2>Update Inventory</h2>
+            <form id="update-inventory-form">
+                <label for="update-product-name">Product Name:</label>
+                <input type="text" id="update-product-name" name="update-product-name" required>
+                <label for="update-quantity">Quantity:</label>
+                <input type="number" id="update-quantity" name="update-quantity" required>
+                <label for="update-recipient">Recipient:</label>
+                <input type="text" id="update-recipient" name="update-recipient" required>
+                <button type="submit" class="btn">Update Inventory</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

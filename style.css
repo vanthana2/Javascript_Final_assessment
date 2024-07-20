@@ -1,0 +1,235 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    width: 90%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cards {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 20px; 
+}
+.card {
+    position: relative;
+    background-color: #fff; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+}
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 8px; 
+    background-color: #28a745; 
+}
+#top-product-1::before {
+    background-color: #007bff; 
+}
+#top-product-2::before {
+    background-color: #ffc107; 
+}
+
+#top-product-3::before {
+    background-color: #dc3545; 
+}
+.card-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: inherit;
+}
+.card {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+.card-icon {
+    margin-right: 16px; 
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    margin: 10px 0;
+}
+#add-product-btn {
+    background-color: #1e9339;
+    color: white;
+    font-size: 19px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block; 
+}
+#update-inventory-btn{
+    background-color: rgb(25, 25, 180);
+    color: white;
+    font-size: 19px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block; 
+}
+.chart-container,
+.recipients {
+    width: 80%;
+    max-width: 1200px; 
+    margin: 20px auto;
+    overflow: hidden;
+}
+.chart-container {
+    background-color: white; 
+    border-radius: 8px; 
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+} 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+thead {
+   background-color: #aaa;
+   border-bottom: 2px solid #ddd;
+}
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+th {
+    background-color: #e28484;
+    color: #2e2424;
+    font-weight: bold;
+}
+tr:nth-child(even){
+    background-color: #f9f9f9;
+}
+tr:hover{
+    background-color: #f1f1f1;
+}
+.table-wrapper{
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th, td {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    td {
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #333;
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button[type="submit"] {
+    align-self: flex-start; 
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+button[type="submit"]:hover {
+    background-color: #218838; 
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
